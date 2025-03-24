@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatMed - Plateforme de Discussion pour Étudiants</title>
+  <title>ChatMed</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -12,9 +12,10 @@
     <!-- Auth Container -->
     <div id="auth-container" class="auth-container">
       <div class="auth-box">
-        <h1>ChatMed</h1>
-        <p class="tagline">Plateforme de discussion pour étudiants</p>
-        
+        <div class="logo-container">
+          <img src="/images/logo_medchat-r.png" alt="Logo ChatMed" class="app-logo">
+          <h1>ChatMed</h1>
+        </div>
         <div class="auth-tabs">
           <button id="login-tab" class="auth-tab active">Connexion</button>
           <button id="register-tab" class="auth-tab">Inscription</button>
@@ -58,7 +59,10 @@
     <div id="chat-container" class="chat-container hidden">
       <div class="sidebar">
         <div class="sidebar-header">
-          <h2>ChatMed</h2>
+          <div class="header-logo">
+            <img src="/images/logo_medchat-r.png" alt="Logo ChatMed" class="app-logo">
+            <h2>ChatMed</h2>
+          </div>
           <div class="user-info">
             <span id="username-display"></span>
             <button id="logout-btn" class="btn-icon">
@@ -80,18 +84,11 @@
             </div>
           </div>
           
-          <div class="online-users-section">
-            <h3>Utilisateurs en ligne</h3>
-            <div id="online-users-list" class="online-users-list">
-              <!-- Online users will be added here dynamically -->
+          <div class="notifications-section">
+            <h3>Notifications <span id="notification-count" class="notification-badge hidden">0</span></h3>
+            <div id="notifications-list" class="notifications-list">
+              <!-- Notifications will be added here dynamically -->
             </div>
-          </div>
-        </div>
-        
-        <div class="notifications-section">
-          <h3>Notifications <span id="notification-count" class="notification-badge hidden">0</span></h3>
-          <div id="notifications-list" class="notifications-list">
-            <!-- Notifications will be added here dynamically -->
           </div>
         </div>
       </div>

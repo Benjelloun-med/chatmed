@@ -1,4 +1,3 @@
-/* Variables */
 :root {
   --primary-color: #4a6fa5;
   --primary-dark: #3a5980;
@@ -14,7 +13,7 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +22,11 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #f0f2f5;
+  background-image: url('../images/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--dark-color);
   line-height: 1.6;
 }
@@ -82,7 +85,6 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Forms */
 .form-group {
   margin-bottom: 1rem;
 }
@@ -130,14 +132,11 @@ a:hover {
 }
 
 .auth-box {
-  background-color: white;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: 2rem;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto; /* Ou utilisez "0" pour aligner complètement à gauche ou droite */
+  width: 50%; /* Ajustez la largeur selon votre besoin */
 }
+
 
 .auth-box h1 {
   color: var(--primary-color);
@@ -239,7 +238,7 @@ a:hover {
   padding: 1rem;
 }
 
-.rooms-section, .online-users-section {
+.rooms-section {
   margin-bottom: 2rem;
 }
 
@@ -250,12 +249,12 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.rooms-list, .online-users-list {
+.rooms-list {
   max-height: 300px;
   overflow-y: auto;
 }
 
-.room-item, .user-item {
+.room-item {
   padding: 0.75rem;
   border-radius: var(--border-radius);
   margin-bottom: 0.5rem;
@@ -263,7 +262,7 @@ a:hover {
   transition: background-color 0.2s ease;
 }
 
-.room-item:hover, .user-item:hover {
+.room-item:hover {
   background-color: #e9ecef;
 }
 
@@ -471,9 +470,29 @@ a:hover {
   }
 }
 
+
 .notification-timestamp {
   font-size: 0.75rem;
   color: var(--secondary-color);
   margin-top: 0.3rem;
   font-style: italic;
+}
+
+/* Logo Styles */
+.logo-container, .header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.header-logo {
+  margin-bottom: 0;
+}
+
+.app-logo {
+  max-width: 50px;
+  height: auto;
+  border-radius: var(--border-radius);
 }
